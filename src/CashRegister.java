@@ -26,13 +26,14 @@ public class CashRegister {
             String s = ("Name: " + a.name + " amount: " + a.quanitty + " Price: " + a.price + " x " + map.get(a) + " = " + (a.price * map.get(a)));
             System.out.println(s);
             if(a.saved != 0) {
-                sumSaved += a.saved;
+                sumSaved += a.saved * map.get(a);
                 System.out.println("Saved on " + a.name + " -" + a.saved);
             }
+            System.out.println("------------------------");
             sum += a.price * map.get(a);
         }
         System.out.println("In total: " + sum);
-        System.out.println("Saved in total" + sumSaved);
+        System.out.println("DISCOUNT: -" + sumSaved);
         System.out.println("Costumer bought " + map.size() + " unique iteams");
     }
 
