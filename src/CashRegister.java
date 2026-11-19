@@ -30,15 +30,11 @@ public class CashRegister {
                 sumSaved += a.saved;
                 System.out.println("Saved on " + a.name + " -" + a.saved);
             }
-
-
             sum += (a.price - a.saved) * map.get(a);
         }
         System.out.println("In total: " + sum);
         System.out.println("Saved in total" + sumSaved);
         System.out.println("Costumer bought " + map.size() + " unique iteams");
-
-
     }
 
 

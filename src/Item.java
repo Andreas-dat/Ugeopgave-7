@@ -31,7 +31,6 @@ public class Item {
         if(!(other instanceof Item)) {
             return false;
         }
-        Item anden = (Item) other;
         return ID.equals(((Item) other).ID);
     }
 
