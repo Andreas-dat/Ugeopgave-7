@@ -15,8 +15,7 @@ public class CashRegister {
         for(Item a : basket){
             Item item = tilbudVare.get(a.ID);
             if(item != null) {
-                item.setSaved(a.price-item.price);
-                a = item;
+                a.setSaved(a.price-item.price);
             }
             map.merge(a, 1, Integer::sum);
         }
@@ -30,7 +29,7 @@ public class CashRegister {
                 sumSaved += a.saved;
                 System.out.println("Saved on " + a.name + " -" + a.saved);
             }
-            sum += (a.price - a.saved) * map.get(a);
+            sum += a.price * map.get(a);
         }
         System.out.println("In total: " + sum);
         System.out.println("Saved in total" + sumSaved);
